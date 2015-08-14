@@ -1,98 +1,87 @@
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <math.h>
-#include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 
 //Changes Number to Greek Letter
 std::string Greek (int n)
 {
-string Letter;
-if (n == 1)
-	Letter = "Alpha";
-else if (n == 2)
-	Letter = "Beta";
-else if (n == 3) 
-	Letter = "Gamma";
-else if (n == 4) 
-	Letter = "Delta";
-else if (n == 5) 
-	Letter = "Epsilon";
-else if (n == 6) 
-	Letter = "Zeta";
-else if (n == 7) 
-	Letter = "Eta";
-else if (n == 8) 
-	Letter = "Theta";
-else if (n == 9) 
-	Letter = "Iota";
-else if (n == 10) 
-	Letter = "Kappa";
-else if (n == 11) 
-	Letter = "Lambda";
-else if (n == 12) 
-	Letter = "Mu";
-else if (n == 13) 
-	Letter = "Nu";
-else if (n == 14) 
-	Letter = "Xi";
-else if (n == 15) 
-	Letter = "Omicron";
-else if (n == 16) 
-	Letter = "Pi";
-else if (n == 17) 
-	Letter = "Rho";
-else if (n == 18) 
-	Letter = "Sigma";
-else if (n == 19) 
-	Letter = "Tau";
-else if (n == 20) 
-	Letter = "Upsilon";
-else if (n == 21) 
-	Letter = "Phi";
-else if (n == 22) 
-	Letter = "Chi";
-else if (n == 23) 
-	Letter = "Psi";
-else if (n == 24) 
-	Letter = "Omega";
-else
-	Letter = "";
-return Letter;
+	switch (n) {
+		case 0:
+			return "";
+		case 1:
+			return "Alpha";
+		case 2:
+			return "Beta";
+		case 3:
+			return "Gamma";
+		case 4:
+			return "Delta";
+		case 5: 
+			return "Epsilon";
+		case 6: 
+			return "Zeta";
+		case 7: 
+			return "Eta";
+		case 8: 
+			return "Theta";
+		case 9: 
+			return "Iota";
+		case 10: 
+			return "Kappa";
+		case 11: 
+			return "Lambda";
+		case 12: 
+			return "Mu";
+		case 13: 
+			return "Nu";
+		case 14: 
+			return "Xi";
+		case 15: 
+			return "Omicron";
+		case 16: 
+			return "Pi";
+		case 17: 
+			return "Rho";
+		case 18: 
+			return "Sigma";
+		case 19: 
+			return "Tau";
+		case 20: 
+			return "Upsilon";
+		case 21: 
+			return "Phi";
+		case 22: 
+			return "Chi";
+		case 23: 
+			return "Psi";
+		case 24: 
+			return "Omega";
+		default :
+			return "ERROR";
+	}; //End Switch
 }
-
 
 int main()
 {
-int Number;
-double Sec_1;
-double Sec_2;
-double Sec_3;
-double Sec_4;
-double Sec_5;
+	unsigned int Number;
+	double Sec_1, Sec_2, Sec_3, Sec_4, Sec_5;
+	string Letter_1, Letter_2, Letter_3, Letter_4, Letter_5;
 
-string Letter_1;
-string Letter_2;
-string Letter_3;
-string Letter_4;
-string Letter_5;
-
-Start:
-cout << "Please enter a number: ";
-cin >> Number;
-cout << endl << endl << endl << endl;
-if (Number > 8308824)
-{
-	cout << "Error, the number you have entered is greater than 8,308,824." << endl << "Due to current coding, the program cannot go higher than this number" << endl;
-	cout << endl << endl << endl << endl;
-	getchar();
-	goto Start;
-}
-
-
-
+	do {
+		cout << "Please enter a number: ";
+		cin >> Number;
+		cout << endl << endl << endl << endl;
+		if (Number > 8308824)
+		{
+			cout << "Error, the number you have entered is greater than 8,308,824." << endl << "Due to current coding, the program cannot go higher than this number" << endl;
+			cout << endl;
+			getchar();
+		}
+	} while (Number > 8308824 || Number < 0);
+	
 	if (Number > 24)
 	{
 		Sec_2 = floor((Number - 1) / 24);
@@ -117,19 +106,19 @@ if (Number > 8308824)
 		Sec_5 = floor((Sec_4 - 1) / 24);
 		Sec_4 = Sec_4 - (Sec_5 * 24);
 	}
-	
-Letter_1 = Greek(Sec_1);
-Letter_2 = Greek(Sec_2);
-Letter_3 = Greek(Sec_3);
-Letter_4 = Greek(Sec_4);
-Letter_5 = Greek(Sec_5);
+		
+	Letter_1 = Greek(Sec_1);
+	Letter_2 = Greek(Sec_2);
+	Letter_3 = Greek(Sec_3);
+	Letter_4 = Greek(Sec_4);
+	Letter_5 = Greek(Sec_5);
 
 
-cout << Letter_5 << " " << Letter_4 << " " << Letter_3 << " " << Letter_2 << " " << Letter_1 << endl;
+	cout << Letter_5 << " " << Letter_4 << " " << Letter_3 << " " << Letter_2 << " " << Letter_1 << endl;
 
-cout << endl << endl << endl << endl;
+	cout << endl << endl << endl << endl;
 
-getchar();
+	getchar();
 
   return 0;
 }
