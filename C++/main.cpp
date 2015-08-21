@@ -2,6 +2,7 @@
 #include <string>
 #include <math.h>
 #include <cstdio>
+#include "version.h"
 
 using namespace std;
 
@@ -19,45 +20,45 @@ std::string Greek (int n)
 			return "Gamma";
 		case 4:
 			return "Delta";
-		case 5: 
+		case 5:
 			return "Epsilon";
-		case 6: 
+		case 6:
 			return "Zeta";
-		case 7: 
+		case 7:
 			return "Eta";
-		case 8: 
+		case 8:
 			return "Theta";
-		case 9: 
+		case 9:
 			return "Iota";
-		case 10: 
+		case 10:
 			return "Kappa";
-		case 11: 
+		case 11:
 			return "Lambda";
-		case 12: 
+		case 12:
 			return "Mu";
-		case 13: 
+		case 13:
 			return "Nu";
-		case 14: 
+		case 14:
 			return "Xi";
-		case 15: 
+		case 15:
 			return "Omicron";
-		case 16: 
+		case 16:
 			return "Pi";
-		case 17: 
+		case 17:
 			return "Rho";
-		case 18: 
+		case 18:
 			return "Sigma";
-		case 19: 
+		case 19:
 			return "Tau";
-		case 20: 
+		case 20:
 			return "Upsilon";
-		case 21: 
+		case 21:
 			return "Phi";
-		case 22: 
+		case 22:
 			return "Chi";
-		case 23: 
+		case 23:
 			return "Psi";
-		case 24: 
+		case 24:
 			return "Omega";
 		default :
 			return "ERROR";
@@ -81,32 +82,32 @@ int main()
 			getchar();
 		}
 	} while (Number > 8308824 || Number < 0);
-	
+
 	if (Number > 24)
 	{
 		Sec_2 = floor((Number - 1) / 24);
 		Sec_1 = Number - (Sec_2 * 24);
 	}
 	else {Sec_1 = Number;}
-	
+
 	if (Sec_2 > 24)
 	{
 		Sec_3 = floor((Sec_2 - 1) / 24);
 		Sec_2 = Sec_2 - (Sec_3 * 24);
 	}
-	
+
 	if (Sec_3 > 24)
 	{
 		Sec_4 = floor((Sec_3 - 1) / 24);
 		Sec_3 = Sec_3 - (Sec_4 * 24);
 	}
-	
+
 	if (Sec_4 > 24)
 	{
 		Sec_5 = floor((Sec_4 - 1) / 24);
 		Sec_4 = Sec_4 - (Sec_5 * 24);
 	}
-		
+
 	Letter_1 = Greek(Sec_1);
 	Letter_2 = Greek(Sec_2);
 	Letter_3 = Greek(Sec_3);

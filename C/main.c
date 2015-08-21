@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "version.h"
 
 int FLOOR(double var)
 {
@@ -14,49 +15,49 @@ if (n == 1)
 	Letter = "Alpha";
 else if (n == 2)
 	Letter = "Beta";
-else if (n == 3) 
+else if (n == 3)
 	Letter = "Gamma";
-else if (n == 4) 
+else if (n == 4)
 	Letter = "Delta";
-else if (n == 5) 
+else if (n == 5)
 	Letter = "Epsilon";
-else if (n == 6) 
+else if (n == 6)
 	Letter = "Zeta";
-else if (n == 7) 
+else if (n == 7)
 	Letter = "Eta";
-else if (n == 8) 
+else if (n == 8)
 	Letter = "Theta";
-else if (n == 9) 
+else if (n == 9)
 	Letter = "Iota";
-else if (n == 10) 
+else if (n == 10)
 	Letter = "Kappa";
-else if (n == 11) 
+else if (n == 11)
 	Letter = "Lambda";
-else if (n == 12) 
+else if (n == 12)
 	Letter = "Mu";
-else if (n == 13) 
+else if (n == 13)
 	Letter = "Nu";
-else if (n == 14) 
+else if (n == 14)
 	Letter = "Xi";
-else if (n == 15) 
+else if (n == 15)
 	Letter = "Omicron";
-else if (n == 16) 
+else if (n == 16)
 	Letter = "Pi";
-else if (n == 17) 
+else if (n == 17)
 	Letter = "Rho";
-else if (n == 18) 
+else if (n == 18)
 	Letter = "Sigma";
-else if (n == 19) 
+else if (n == 19)
 	Letter = "Tau";
-else if (n == 20) 
+else if (n == 20)
 	Letter = "Upsilon";
-else if (n == 21) 
+else if (n == 21)
 	Letter = "Phi";
-else if (n == 22) 
+else if (n == 22)
 	Letter = "Chi";
-else if (n == 23) 
+else if (n == 23)
 	Letter = "Psi";
-else if (n == 24) 
+else if (n == 24)
 	Letter = "Omega";
 else if (n == 0)
     Letter = "";
@@ -105,25 +106,25 @@ if (Number > 8308824)
 	{
 	    Sec_1 = Number;
 	}
-	
+
 	if (Sec_2 > 24)
 	{
 		Sec_3 = FLOOR((Sec_2 - 1) / 24);
 		Sec_2 = Sec_2 - (Sec_3 * 24);
 	}
-	
+
 	if (Sec_3 > 24)
 	{
 		Sec_4 = FLOOR((Sec_3 - 1) / 24);
 		Sec_3 = Sec_3 - (Sec_4 * 24);
 	}
-	
+
 	if (Sec_4 > 24)
 	{
 		Sec_5 = FLOOR((Sec_4 - 1) / 24);
 		Sec_4 = Sec_4 - (Sec_5 * 24);
 	}
-	
+
 Letter_1 = Greek(Sec_1);
 Letter_2 = Greek(Sec_2);
 Letter_3 = Greek(Sec_3);

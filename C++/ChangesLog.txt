@@ -1,0 +1,8 @@
+21 August 2015
+   released version 1.0.1 of Greek-Letters-Converter-C++
+
+     Change log:
+        -Added: Version.h
+        -Added: Code::Blocks Support
+        -
+

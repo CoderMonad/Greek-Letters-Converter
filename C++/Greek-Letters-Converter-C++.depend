@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1440179112 source:c:\users\patrick.rye\documents\github\greek-letters-converter\c++\main.cpp
+	<iostream>
+	<string>
+	<math.h>
+	<cstdio>
+	"version.h"
+
+1440180200 c:\users\patrick.rye\documents\github\greek-letters-converter\c++\version.h
+

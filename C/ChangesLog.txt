@@ -1,0 +1,15 @@
+21 August 2015
+   released version 1.0.2 of Greek-Letters-Converter-C
+
+     Change log:
+        -Added: Boilerplate
+        -Added: Icon
+        -Added: Define in Code::Blocks that holds the location of version file for boilerplate.rc
+
+21 August 2015
+   released version 1.0.1 of Greek-Letters-Converter-C
+
+     Change log:
+        -Added: Version.h
+        -Applied: Code:Blocks Support
+
