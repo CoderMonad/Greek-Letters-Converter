@@ -68,7 +68,7 @@ std::string Greek (int n)
 int main()
 {
 	unsigned int Number;
-	double Sec_1, Sec_2, Sec_3, Sec_4, Sec_5;
+	int Sec_1, Sec_2, Sec_3, Sec_4, Sec_5;
 	string Letter_1, Letter_2, Letter_3, Letter_4, Letter_5;
 
 	do {

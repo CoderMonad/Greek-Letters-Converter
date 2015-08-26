@@ -4,12 +4,7 @@ This is a short list of languages I still want to write this code in; or things 
 
 ## To Start
 
-
 * Graphical Interface with python
-
-* Ruby
-
-* Java
 
 * PHP
 
@@ -23,9 +18,12 @@ This is a short list of languages I still want to write this code in; or things 
 
 * Scala
 
-
 ## To Finish
 
 * C#
 
 * LOLCode
+
+* Java
+
+~~* Ruby~~ 2015-08-26

@@ -84,7 +84,10 @@ function Greek(n) {
     //console.log("Greek Function Started");
     console.log(n);
     var Letter = "";
-    if (n == 1) {
+	if (n == 0) {
+		Letter = "";
+		console.log("You get a blank");
+	} else if (n == 1) {
         Letter = "Alpha";
         console.log("You get an Alpha");
     } else if (n == 2) {
