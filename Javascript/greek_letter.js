@@ -1,8 +1,7 @@
-//Starts Functions and changes results html
 function Start(form) {
     console.log("Start Function Started");
 
-    var nNumber = parseInt(form.Box_Number.value, 10);
+    var nNumber = document.getElementById("Box_Number").value;
     console.log(nNumber);
     var Sec_1 = 0;
     var Sec_2 = 0;
@@ -16,11 +15,6 @@ function Start(form) {
     var Letter_4 = "";
     var Letter_5 = "";
     var Full = "";
-
-
-
-
-
 
     if (nNumber > 24) {
         Sec_2 = Math.floor((nNumber - 1) / 24);
@@ -65,29 +59,26 @@ function Start(form) {
     console.log(Letter_4);
     console.log(Letter_5);
 
-
     Full = Letter_5 + " " + Letter_4 + " " + Letter_3 + " " + Letter_2 + " " + Letter_1;
-
+	if (nNumber == 12200) {console.log("You found an easter egg (my fraternity).");}
+	
     console.log("String Created");
     console.log(Full);
     
-    var element = document.getElementById("result");
+    var element = document.getElementById("result_letters");
 
     element.innerHTML = Full;
-
 
     //console.log("String Displayed");
     return false;
 }
+
 //Changes Number to Greek Letter
 function Greek(n) {
     //console.log("Greek Function Started");
     console.log(n);
     var Letter = "";
-	if (n == 0) {
-		Letter = "";
-		console.log("You get a blank");
-	} else if (n == 1) {
+    if (n == 1) {
         Letter = "Alpha";
         console.log("You get an Alpha");
     } else if (n == 2) {
@@ -163,6 +154,116 @@ function Greek(n) {
         Letter = "";
         console.log("You get an Error");
     }
-
     return Letter;
+}
+//Change 5 Greek Letters into Numbers
+function GtoN(form) {
+    var Letter_1 = document.getElementById("firstletter").value;
+    var Letter_2 = document.getElementById("secondletter").value;
+    var Letter_3 = document.getElementById("thirdletter").value;
+    var Letter_4 = document.getElementById("fourthletter").value;
+    var Letter_5 = document.getElementById("fifthletter").value;
+	//var nNumber = parseInt(form.Box_Number.value, 10);
+	//var nameValue = document.getElementById("uniqueID").value;
+		
+	var n1 = 0;
+	var n2 = 0;
+	var n3 = 0;
+	var n4 = 0;
+	var n5 = 0;
+	var FullNumber = 0;
+	
+	n1 = SNumber(Letter_1);
+	n2 = (n1*24) + SNumber(Letter_2);
+	n3 = (n2*24) + SNumber(Letter_3);
+	n4 = (n3*24) + SNumber(Letter_4);
+	n5 = (n4*24) + SNumber(Letter_5);
+	FullNumber = n5;
+	if (FullNumber == 12200) {console.log("You found an easter egg (my fraternity).");}
+    var element = document.getElementById("result_number");
+    element.innerHTML = FullNumber;
+    //console.log("String Displayed");
+    return false;
+}
+
+//Change a Greek letter into a number ranging from 0 to 24
+function SNumber(s) {
+console.log(s);
+    if (s == "Alpha") {
+        Number = 1;
+        console.log("You get an Alpha");
+    } else if (s == "Beta") {
+        Number = 2;
+        console.log("You get an Beta");
+    } else if (s == "Gamma") {
+        Number = 3
+        console.log("You get an Gamma");
+    } else if (s == "Delta") {
+        Number = 4;
+        console.log("You get an Delta");
+    } else if (s == "Epsilon") {
+        Number = 5;
+        console.log("You get an Epsilon");
+    } else if (s == "Zeta") {
+        Number = 6;
+        console.log("You get an Zeta");
+    } else if (s == "Eta") {
+        Number = 7;
+        console.log("You get an Eta");
+    } else if (s == "Theta") {
+        Number = 8;
+        console.log("You get an Theta");
+    } else if (s == "Iota") {
+        Number = 9;
+        console.log("You get an Iota");
+    } else if (s == "Kappa") {
+        Number = 10;
+        console.log("You get an Kappa");
+    } else if (s == "Lambda") {
+        Number = 11;
+        console.log("You get an Lambda");
+    } else if (s == "Mu") {
+        Number = 12;
+        console.log("You get an Mu");
+    } else if (s == "Nu") {
+        Number = 13;
+        console.log("You get an Nu");
+    } else if (s == "Xi") {
+        Number = 14;
+        console.log("You get an Xi");
+    } else if (s == "Omicron") {
+        Number = 15;
+        console.log("You get an Omicron");
+    } else if (s == "Pi") {
+        Number = 16;
+        console.log("You get an Pi");
+    } else if (s == "Rho") {
+        Number = 17;
+        console.log("You get an Rho");
+    } else if (s == "Sigma") {
+        Number = 18;
+        console.log("You get an Sigma");
+    } else if (s == "Tau") {
+        Number = 19;
+        console.log("You get an Tau");
+    } else if (s == "Upsilon") {
+        Number = 20;
+        console.log("You get an Upsilon");
+    } else if (s == "Phi") {
+        Number = 21;
+        console.log("You get an Phi");
+    } else if (s == "Chi") {
+        Number = 22;
+        console.log("You get an Chi");
+    } else if (s == "Psi") {
+        Number = 23;
+        console.log("You get an Psi");
+    } else if (s == "Omega") {
+        Number = 24;
+        console.log("You get an Omega");
+    } else {
+        Number = 0;
+        console.log("You get an Error");
+    }
+	return Number;
 }
