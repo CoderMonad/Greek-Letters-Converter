@@ -6,13 +6,7 @@ This is a short list of languages I still want to write this code in; or things 
 
 * Graphical Interface with python
 
-* PHP
-
-* Objective-C
-
 * Go
-
-* Perl
 
 * Haskell
 
@@ -25,5 +19,11 @@ This is a short list of languages I still want to write this code in; or things 
 * LOLCode
 
 * Java
+
+* PHP
+
+* Perl
+
+* Objective-C
 
 ~~* Ruby~~ 2015-08-26
