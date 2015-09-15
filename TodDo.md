@@ -4,7 +4,11 @@ This is a short list of languages I still want to write this code in; or things 
 
 ## To Start
 
-* Graphical Interface with python
+* Python with Graphical Interface
+
+* Java with Graphical Interface
+
+* Java applet [tutorial](http://www.tutorialspoint.com/java/java_applet_basics.htm)
 
 * Go
 
@@ -18,7 +22,7 @@ This is a short list of languages I still want to write this code in; or things 
 
 * LOLCode
 
-* Java
+~~* Java~~ 2015-09-15
 
 * PHP
 

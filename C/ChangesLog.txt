@@ -1,3 +1,11 @@
+15 September 2015
+   released version 1.0.3 of Greek-Letters-Converter-C
+
+     Change log:
+        -Merged: Boilerplate and My_icon.rc
+		-Improved: Boilerplate usage and defines in Code::Blocks
+		-Improved: Code greatly using arrays and allow a change of a single number to expand the number of letters
+
 21 August 2015
    released version 1.0.2 of Greek-Letters-Converter-C
 

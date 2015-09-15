@@ -215,4 +215,27 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+#############
+## Code Blocks
+#############
+
+*.depend
+*.layout
+/C++/obj/
+/C++/bin/
+/C/obj/
+/C/bin/
+
+#############
+## My stuff
+#############
+
+*.zip
+*.rar
+*.gz
+*.tmp
+*.dll
+*.o
+*.exe
+*.jar
 

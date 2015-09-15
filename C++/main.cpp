@@ -2,9 +2,13 @@
 #include <string>
 #include <math.h>
 #include <cstdio>
+
 #include "version.h"
 
 using namespace std;
+
+//Change this if you want to increase the number of letters
+#define DEFINED_MAX_NUMBER_OF_LETTERS 5
 
 //Changes Number to Greek Letter
 std::string Greek (int n)
@@ -68,54 +72,47 @@ std::string Greek (int n)
 int main()
 {
 	unsigned int Number;
-	int Sec_1, Sec_2, Sec_3, Sec_4, Sec_5;
-	string Letter_1, Letter_2, Letter_3, Letter_4, Letter_5;
+	unsigned int MaxValue;
+	int Secs[DEFINED_MAX_NUMBER_OF_LETTERS];
+	string Letters[DEFINED_MAX_NUMBER_OF_LETTERS];
+
+    //get the max value based on the number of letters
+    for (unsigned char i = 0; i < DEFINED_MAX_NUMBER_OF_LETTERS; i++) {
+        MaxValue *= 24;
+        MaxValue += 24;
+    }
 
 	do {
 		cout << "Please enter a number: ";
 		cin >> Number;
 		cout << endl << endl << endl << endl;
-		if (Number > 8308824)
-		{
-			cout << "Error, the number you have entered is greater than 8,308,824." << endl << "Due to current coding, the program cannot go higher than this number" << endl;
+		if (Number > MaxValue) {
+			cout << "Error, the number you have entered is greater than "<< MaxValue << "." << endl << "Due to current coding, the program cannot go higher than this number" << endl;
 			cout << endl;
 			getchar();
 		}
-	} while (Number > 8308824 || Number < 0);
+	} while (Number > MaxValue || Number < 0);
 
-	if (Number > 24)
-	{
-		Sec_2 = floor((Number - 1) / 24);
-		Sec_1 = Number - (Sec_2 * 24);
-	}
-	else {Sec_1 = Number;}
+    //Make sure they all equal 0
+    for (unsigned char i = 0; i < DEFINED_MAX_NUMBER_OF_LETTERS; i++) {Secs[i] = 0;}
 
-	if (Sec_2 > 24)
-	{
-		Sec_3 = floor((Sec_2 - 1) / 24);
-		Sec_2 = Sec_2 - (Sec_3 * 24);
-	}
+	Secs[0] = Number;
 
-	if (Sec_3 > 24)
-	{
-		Sec_4 = floor((Sec_3 - 1) / 24);
-		Sec_3 = Sec_3 - (Sec_4 * 24);
-	}
+    for (unsigned char i = 0; i < DEFINED_MAX_NUMBER_OF_LETTERS; i++) {
+        if (Secs[i] > 24 && i != DEFINED_MAX_NUMBER_OF_LETTERS - 1) {
+            Secs[i + 1] = floor( ( Secs[i] - 1 ) / 24 );
+            Secs[i] -= Secs[i + 1] * 24;
+        } //end if
+    } //end for
 
-	if (Sec_4 > 24)
-	{
-		Sec_5 = floor((Sec_4 - 1) / 24);
-		Sec_4 = Sec_4 - (Sec_5 * 24);
-	}
+    for (unsigned char i = 0; i < DEFINED_MAX_NUMBER_OF_LETTERS; i++) {
+        Letters[i] = Greek( Secs[i] );
+    }
 
-	Letter_1 = Greek(Sec_1);
-	Letter_2 = Greek(Sec_2);
-	Letter_3 = Greek(Sec_3);
-	Letter_4 = Greek(Sec_4);
-	Letter_5 = Greek(Sec_5);
-
-
-	cout << Letter_5 << " " << Letter_4 << " " << Letter_3 << " " << Letter_2 << " " << Letter_1 << endl;
+    //now print out the letters in reverse order
+    for (unsigned char i = DEFINED_MAX_NUMBER_OF_LETTERS; i > 0; i--) {
+        cout<<" "<<Letters[i-1];
+    }
 
 	cout << endl << endl << endl << endl;
 

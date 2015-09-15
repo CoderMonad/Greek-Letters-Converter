@@ -16,11 +16,14 @@
 					<Add option="-Wall" />
 					<Add option="-pg" />
 					<Add option="-g" />
-					<Add option='-DDEFINED_VERSION_LOCATION #include &quot;../C/version.h&quot;' />
+					<Add option="-DDEFINED_BUILD_MODE_PRIVATE" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
 				</Linker>
+				<Environment>
+					<Variable name="BUILD_MODE" value="-DDEFINED_BUILD_MODE_PRIVATE" />
+				</Environment>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Greek-Letters-Converter-C" prefix_auto="1" extension_auto="1" />
@@ -29,22 +32,24 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add option='-DDEFINED_VERSION_LOCATION #include &quot;../C/version.h&quot;' />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 				</Linker>
+				<Environment>
+					<Variable name="BUILD_MODE" value="" />
+				</Environment>
 			</Target>
+			<Environment>
+				<Variable name="PATH_TO_VERSION" value="-I../C/" />
+			</Environment>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="../res/boilerplate.rc">
 			<Option compilerVar="WINDRES" />
-			<Option compiler="gcc" use="0" buildCommand="windres boilerplate.rc -O coff boilerplate.res" />
-		</Unit>
-		<Unit filename="../res/my_icon.rc">
-			<Option compilerVar="WINDRES" />
+			<Option compiler="gcc" use="1" buildCommand="$rescomp $file $(BUILD_MODE) $(PATH_TO_VERSION) -O coff $resource_output" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

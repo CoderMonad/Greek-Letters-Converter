@@ -1,8 +1,21 @@
+15 September 2015
+   released version 1.0.4 of Greek-Letters-Converter-C++
+
+     Change log:
+        -Removed: My_icon.rc
+        -Applied: Merged My_Icon.rc with Boilperplate.rc
+
+15 September 2015
+   released version 1.0.3 of Greek-Letters-Converter-C++
+
+     Change log:
+        -Applied: Easier to change number of letters
+        -Applied: Letters are now stored in array
+
 21 August 2015
    released version 1.0.1 of Greek-Letters-Converter-C++
 
      Change log:
         -Added: Version.h
         -Added: Code::Blocks Support
-        -
 
