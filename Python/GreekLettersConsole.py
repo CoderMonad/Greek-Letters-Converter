@@ -116,10 +116,12 @@ def GreekLetter(number):
 		
 # Main function
 num = 8308325 # Just so I know the while loop will run
-while num > 8308324 :
-	num = int(input("Please Enter a number between 0 and 8,308,324: "))
-	if num > 8308324:
+while (num > 8308324 or num <= 0) :
+	num = int(input("Please enter a number between 0 and 8,308,324: "))
+	if num > 8308324 :
 		print("\nThe number you have entered is too large, try again.\n")
+	elif num <= 0:
+		print("\nThe number you have entered is too small, try again.\n")
 
 
 Sec_1 = 0
@@ -147,11 +149,11 @@ if Sec_4 > 24:
 	Sec_4 = int(Sec_4 - (Sec_5 * 24))	
 
 	
-print(Sec_5)
-print(Sec_4)
-print(Sec_3)
-print(Sec_2)
-print(Sec_1)
+#print(Sec_5)
+#print(Sec_4)
+#print(Sec_3)
+#print(Sec_2)
+#print(Sec_1)
 
 GreekLetter(Sec_5)
 GreekLetter(Sec_4)
