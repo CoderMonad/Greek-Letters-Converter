@@ -16,6 +16,8 @@ This is a short list of languages I still want to write this code in; or things 
 
 * Scala
 
+* TCL
+
 ## To Finish
 
 * C#
