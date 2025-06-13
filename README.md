@@ -2,6 +2,8 @@
 
 This is a program that I've written in a bunch of different languages that will take a number into convert it into a set of Greek letters. Because I've got a bunch of different languages I'll put them all here in one Repository with different folders between them all. (I tried with different branches but it got really confusing).
 
+For example 1264 is Beta Delta Pi, and 12200 is Phi Delta Theta.
+
 I write this program because it is simple and generally helps me grasp a new language when I am trying to learn it.
 
 It has no point other than being simple. 
